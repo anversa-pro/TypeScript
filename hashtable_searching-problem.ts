@@ -10,14 +10,11 @@ function normalize(word: string) {
 function wordRepetitions(text: string) {
     let dict: { [key: string]: number } = {};
     let separatedWords = text.split(" ");
-    for (let word of separatedWords)
-    {
-        if (normalize(word) in dict)
-        {
+    for (let word of separatedWords) {
+        if (normalize(word) in dict) {
             ++dict[normalize(word)];
         }
-        else
-        {
+        else {
             dict[normalize(word)] = 1;
         }
     }
